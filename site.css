@@ -1,19 +1,57 @@
 body{
   font-family: "Times New Roman";
-    background-color: #F2FFFC;
+  background-color: #F2FFFC;
+  line-height: 24px;
 }
 p{
   text-align: justify;
   font-family: "Crimson Text", serif;
 }
-h1{
+main h1{
   font-size: 60px; 
   background-color: #851944;
   color: #FAFFFA;
   text-align: center;
   font-family: "Open Sans Condensed", sans-serif;
+  padding: 25px;
+  border-bottom: 10px solid #000000;
 }
+
+main div{
+  width: 720px;
+  margin-left: auto;
+  margin-right: auto;  
+}
+
 h2{
   font-size: 16px;
   font-family: "Open Sans Condensed", sans-serif;  
 }
+blockquote{
+  background-color: #D9E5E3;
+  padding: 20px;
+  margin: 0;
+  border: 10px solid #C2CCCA;
+  width: 250px;
+  box-sizing: border-box;  
+}
+aside{
+  background-color: #3C1D3D;
+  color: #F2FFFC;
+  padding: 20px;
+  text-align: center;
+}
+ul{
+  color: #F2FFFC;
+}
+ul li a{
+  color: inherit;
+}
+footer{
+  background-color: #000000;
+  color: #F2FFFC;
+  padding: 20px;
+}
+
+
+
