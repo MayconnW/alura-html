@@ -32,7 +32,7 @@ main h1{
   margin-left: auto;
   margin-right: auto;  
   padding-top: 30px;
-  padding-bottom: 30px;
+  padding-bottom: 80px;
 }
 
 h2{
@@ -110,10 +110,15 @@ footer{
 }
 
 .rodape{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
   background-color: #000000;
   color: #F2FFFC;
-  padding: 20px;
+  padding: 10px;
   clear: both;
+  text-align: center;
+  box-sizing: border-box;
 }
 
 .bottom-border{
@@ -126,14 +131,22 @@ footer{
 }
 
 aside, img{
-  float:right;
-  width: 20%;  
+  float:right;  
   box-sizing: border-box;
   border-bottom: 10px solid #000000;
   border-left: 10px solid #000000;
 }
 
 aside{
+  position: relative;
+  top: 310px;
   clear: right;  
+  width: 20%;  
+}
+
+.foto{
+  position: absolute;
+  top: 0;
+  right: 0;
 }
 
