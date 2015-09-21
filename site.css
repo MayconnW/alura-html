@@ -3,12 +3,14 @@ body{
   background-color: #F2FFFC;
   line-height: 24px;
 }
+
 p{
   text-align: justify;
   font-family: "Crimson Text", serif;
   margin-top: 20px;
   margin-bottom: 20px;
 }
+
 main h1{
   font-size: 60px; 
   background-color: #851944;
@@ -31,7 +33,8 @@ h2{
   font-size: 30px;
   font-family: "Open Sans Condensed", sans-serif;  
 }
-blockquote{
+
+.comment{
   background-color: #D9E5E3;
   padding: 20px;
   margin-top: 20px;
@@ -42,30 +45,42 @@ blockquote{
   width: 250px;
   box-sizing: border-box;  
 }
+
 aside{
   background-color: #3C1D3D;
   color: #F2FFFC;
   padding: 20px;
   text-align: center;
 }
+
 aside h1{
   font-size: 30px;
   padding-bottom: 25px;
 }
-aside ul li{
-  display: inline-block;
+
+.icones-sociais li{
+  display: inline-block;  
 }
+
 ul{
   color: #F2FFFC;
 }
+
 ul li a{
   color: inherit;
 }
+
 footer{
+  
+}
+
+.rodape{
   background-color: #000000;
   color: #F2FFFC;
   padding: 20px;
 }
 
-
-
+.bottom-border{
+  border-bottom: 3px solid #ccc;
+  margin-bottom: 30px;  
+}
