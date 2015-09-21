@@ -11,6 +11,11 @@ p{
   margin-bottom: 20px;
 }
 
+main{
+  float:left;
+  width: 80%;
+}
+
 main h1{
   font-size: 60px; 
   background-color: #851944;
@@ -22,7 +27,7 @@ main h1{
   text-transform: uppercase;
 }
 
-main div{
+.container{
   width: 720px;
   margin-left: auto;
   margin-right: auto;  
@@ -33,9 +38,10 @@ main div{
 h2{
   font-size: 30px;
   font-family: "Open Sans Condensed", sans-serif;  
+  clear: both;
 }
 
-.comment{
+.comentario{
   background-color: #D9E5E3;
   padding: 20px;
   margin-top: 20px;
@@ -46,6 +52,15 @@ h2{
   width: 250px;
   box-sizing: border-box;  
 }
+
+.comentario-direita{
+  float: right;
+}
+
+.comentario-esquerda{
+  float: left;
+}
+
 
 aside{
   background-color: #3C1D3D;
@@ -98,6 +113,7 @@ footer{
   background-color: #000000;
   color: #F2FFFC;
   padding: 20px;
+  clear: both;
 }
 
 .bottom-border{
@@ -108,3 +124,16 @@ footer{
 .menu a{
   text-transform: lowercase;
 }
+
+aside, img{
+  float:right;
+  width: 20%;  
+  box-sizing: border-box;
+  border-bottom: 10px solid #000000;
+  border-left: 10px solid #000000;
+}
+
+aside{
+  clear: right;  
+}
+
