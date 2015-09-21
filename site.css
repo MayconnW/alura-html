@@ -52,6 +52,9 @@ aside h1{
   font-size: 30px;
   padding-bottom: 25px;
 }
+aside ul li{
+  display: inline-block;
+}
 ul{
   color: #F2FFFC;
 }
