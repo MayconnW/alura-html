@@ -86,15 +86,15 @@ aside h1{
 }
 
 .icone-github{
-  background-image: url(github.png);
+  background-image: url(../img/github.png);
 }
 
 .icone-twitter{
-  background-image: url(twitter.png);
+  background-image: url(../img/twitter.png);
 }
 
 .icone-linkedin{
-  background-image: url(linkedin.png);
+  background-image: url(../img/linkedin.png);
 }
 
 ul{
@@ -177,19 +177,19 @@ aside{
 }
 
 .box1{
-  background-image: url(p1.png);
+  background-image: url(../img/p1.png);
 }
 
 .box2{
-  background-image: url(p2.png);
+  background-image: url(../img/p2.png);
 }
 
 .box3{
-  background-image: url(p3.png);
+  background-image: url(../img/p3.png);
 }
 
 .box4{
-  background-image: url(p4.png);
+  background-image: url(../img/p4.png);
 }
 
 
