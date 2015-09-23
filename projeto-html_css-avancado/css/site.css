@@ -1,0 +1,195 @@
+body{
+  font-family: "Times New Roman";
+  background-color: #F2FFFC;
+  line-height: 24px;
+}
+
+p{
+  text-align: justify;
+  font-family: "Crimson Text", serif;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+main{
+  float:left;
+  width: 80%;
+}
+
+main h1{
+  font-size: 60px; 
+  background-color: #851944;
+  color: #FAFFFA;
+  text-align: center;
+  font-family: "Open Sans Condensed", sans-serif;
+  padding: 25px;
+  border-bottom: 10px solid #000000;
+  text-transform: uppercase;
+}
+
+.container{
+  width: 720px;
+  margin-left: auto;
+  margin-right: auto;  
+  padding-top: 30px;
+  padding-bottom: 80px;
+}
+
+h2{
+  font-size: 30px;
+  font-family: "Open Sans Condensed", sans-serif;  
+  clear: both;
+}
+
+.comentario{
+  background-color: #D9E5E3;
+  padding: 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 40px;
+  margin-right: 40px;
+  border: 10px solid #C2CCCA;
+  width: 250px;
+  box-sizing: border-box;  
+}
+
+.comentario-direita{
+  float: right;
+}
+
+.comentario-esquerda{
+  float: left;
+}
+
+
+aside{
+  background-color: #3C1D3D;
+  color: #F2FFFC;
+  padding: 20px;
+  text-align: center;
+}
+
+aside h1{
+  font-size: 30px;
+  padding-bottom: 25px;
+}
+
+.icones-sociais li{
+  display: inline-block;    
+}
+
+.icones-sociais a{
+  display: block;  
+  width: 40px;
+  height: 40px;
+  text-indent: -99999px;
+}
+
+.icone-github{
+  background-image: url(github.png);
+}
+
+.icone-twitter{
+  background-image: url(twitter.png);
+}
+
+.icone-linkedin{
+  background-image: url(linkedin.png);
+}
+
+ul{
+  color: #F2FFFC;
+}
+
+ul li a{
+  color: inherit;
+}
+
+footer{
+  
+}
+
+.rodape{
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: #000000;
+  color: #F2FFFC;
+  padding: 10px;
+  clear: both;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.bottom-border{
+  border-bottom: 3px solid #ccc;
+  margin-bottom: 30px;  
+}
+
+.menu a{
+  text-transform: lowercase;
+}
+
+aside, img{
+  float:right;  
+  box-sizing: border-box;
+  border-bottom: 10px solid #000000;
+  border-left: 10px solid #000000;
+}
+
+aside{
+  position: relative;
+  top: 310px;
+  clear: right;  
+  width: 20%;  
+}
+
+.foto{
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.linha li{
+  border: 8px solid #000;
+  display: inline-block;
+  width: 300px;
+  height: 200px;    
+  background-color: #FAFFFC;  
+  margin: 10px;
+}
+
+.linha ul{
+  
+  padding: 16px; 
+}
+
+.linha a{
+  text-indent: -9999px;
+}
+
+.box{  
+  width: 300px;
+  height: 151px;      
+  display: block;  
+  text-align: center;  
+  color:black;
+}
+
+.box1{
+  background-image: url(p1.png);
+}
+
+.box2{
+  background-image: url(p2.png);
+}
+
+.box3{
+  background-image: url(p3.png);
+}
+
+.box4{
+  background-image: url(p4.png);
+}
+
+
