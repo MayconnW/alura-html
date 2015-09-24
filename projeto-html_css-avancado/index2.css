@@ -1,0 +1,31 @@
+body{
+  line-height: 1.5;
+  font-family: "Crimson Text", "Times New Roman", serif
+}
+.cabecalho{
+  border-bottom:  0.5em #000 solid;
+  background-color: #851944;
+  text-align: center;
+  padding: 1.6em;
+}
+
+h1, h2, .cabecalho, .subtitutlo-principal{
+  font-family: "Open Sans Condensed", "Arial", sans-serif; 
+}
+
+.subtitutlo-principal{
+  color: white;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.cabecalho h1{
+  text-transform: uppercase;
+  color: white;
+  font-size: 3.7em;
+  font-weight: bold;
+}
+
+.foto-home{
+  height: 200px; 
+}
