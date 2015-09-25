@@ -5,97 +5,115 @@
 	<title>Introdução ao jQuery</title>
 	<link rel="stylesheet" href="css/bootstrap.css">
 	<link rel="stylesheet" href="css/estilos.css">
-    <link rel="stylesheet" href="css/treinamentos.css">
+  <link rel="stylesheet" href="css/treinamentos.css">
+  <link rel="stylesheet" media="(min-width: 800px)" href="css/cores.css">
+  
+  <meta name="viewport" content="width=device-width">
+    
 </head>
-<body class="container">
+<body>
 
-<h1>Treinamentos</h1>
-
-<input id="botao-atualiza-ajax" type="button" value="atualizar lista generic">
-<input id="botao-atualiza-get" type="button" value="atualizar lista ajax">
-
-<ul id="lista">
-	<li>Lógica de Programação</li>
-	<li>Dando os primeiros passos na web com HTML e CSS</li>
-	<li>Banco de dados e SQL</li>
-	<li>Ruby on Rails: do zero com deploy</li>
-	<li>NodeJS e Socket I/O</li>
-	<li>Vraptor: web fácil e rápida</li>
-	<li>Git: trabalhe em equipe com controle e segurança</li>
-	<li>Primeiros passos com Java</li>
-</ul>
-
-<label>Novo treinamento:</label>
-<input id="treinamento">
-<input id="botao-adiciona" type="button" value="adicionar"/>
-
-<script src="js/jquery.js"></script>  
-<script>
-  
-  
-  $("#lista").on("mouseover", "li", function(){
-    $(this).removeClass("sem-cor");
-    $(this).addClass("cor-selecao");
-  }  
-  );
-  
-  $("#lista").on("mouseout","li", function(){
-    $(this).removeClass("cor-selecao");
-    $(this).addClass("sem-cor");
-  }  
-  );
-  
-  $("#botao-adiciona").click(function(){
-    var input = $("#treinamento");
-    var novo = input.val();
-    $("<li>").text(novo).appendTo("#lista");
-    input.val("");    
-  });
-  
-  $('#lista').on("dblclick", "li", function(){
-      $(this).animate({"margin-left":"-=300"},2000,function(){
-        $(this).remove();
-      });
-    }
-  
-  );
-  
-//  $("botao-atualiza").click(function(){
-//    $.ajax({
-//      url: "http://mirrorfashion.caelum.com.br/treinamentos",
-//      datatype: "jsonp",
-//      success: function(retorno){
-//        $.each(retorno.treinamentos, function()
-//      }
-//    }):
-//  });
-  
-  $("#botao-atualiza-ajax").click(function(){
-    $.ajax({
-      url: "http://mirrorfashion.caelum.com.br/treinamentos",
-      dataType: "jsonp",
-      success: function(retorno){
-        $.each(retorno.treinamentos, function(){
-          $("<li>").text(this.nome).appendTo("#lista");
-        }); 
+  <div class="container">
+    <h1 class="titulo-principal">Lista de Afazeres</h1>
+    
+    <input id="botao-atualiza-ajax" type="button" value="atualizar lista generic" hidden >
+    
+    <input id="botao-atualiza-get" type="button" value="" class="botao-atualiza">
+    
+    <ul id="lista" class="listab">
+    
+    </ul>
+    
+    <div class="alinha-esquerda">
+      <label>Novo treinamento:</label>
+      <input id="treinamento">
+      <input id="botao-adiciona" type="button" value="adicionar"/>
+    </div>
+    
+    <script src="js/jquery.js"></script>  
+    <script>
+    
+      function addItem(id_, nome_){
+        $("<li>",{id:id_}).text(nome_).addClass("list-group-item dropdown-toggle").appendTo("#lista");
       }
-    });
-  });
-  
-  $("#botao-atualiza-get").click(function(){
-    $.get('http://mirrorfashion.caelum.com.br/treinamentos', 
-          function(retorno){
-      $.each(retorno.treinamentos, function(){
-          $("<li>").text(this.nome).appendTo("#lista");
-        });       
-    },'jsonp');
-  });
-  
-  
+       
+      function atualiza (){
+    
+        $.ajax({
+          url: "https://livro-rails-mayconn.c9.io/compromissos.json",
+          dataType: "jsonp",
+          success: function(retorno){
+            $("#lista li").remove();
+            $.each(retorno, function(){
+              //$("<li>",{id:this.id}).text(this.descricao).addClass("list-group-item dropdown-toggle").appendTo("#lista");
+              addItem(this.id,this.descricao);
+            }); 
+          }
+        });
+              
+      }
       
-  
-  
-</script>
+      $("#lista").on("mouseover", "li", function(){
+        $(this).removeClass("sem-cor");
+        $(this).addClass("cor-selecao");
+      }  
+      );
+      
+      $("#lista").on("mouseout","li", function(){
+        $(this).removeClass("cor-selecao");
+        $(this).addClass("sem-cor");
+      }  
+      );
+      
+      $("#botao-adiciona").click(function(){
+        var input = $("#treinamento");
+        var novo = input.val();
+      //  addItem(-1, novo);
+        
+        var jsonPost = JSON.stringify('{descricao": "teste"}');
+        $.post("https://livro-rails-mayconn.c9.io/compromissos.json",{compromisso:{"descricao": novo}},'jsonp');
+        
+        
+        input.val("");    
+      });
+      
+      $('#lista').on("click", "li", function(){
+          $(this).animate({"margin-left":"-=300"},2000,function(){
+            $(this).remove();
+    
+            $.ajax({
+              type: "DELETE",
+              url: "https://livro-rails-mayconn.c9.io/compromissos/"+$(this).attr("id")+".json",
+              data: {compromisso:{"id": '"'+$(this).attr("id")+'"'}},
+              dataType: 'jsonp'
+            });
+            
+          });
+        }
+      
+      );
+      
+      $("#botao-atualiza-ajax").click(function(){
+        $.ajax({
+          url: "http://mirrorfashion.caelum.com.br/treinamentos",
+          dataType: "jsonp",
+          success: function(retorno){
+            $.each(retorno.treinamentos, function(){
+              $("<li>", {id:"'li'"}).text(this.nome).appendTo("#lista");
+            }); 
+          }
+        });
+      });
+      
+      $("#botao-atualiza-get").click(atualiza);
+    
+      
+      atualiza();
+          
+      
+      
+    </script>
 
+  </div>
 </body>
 </html>

@@ -1,0 +1,30 @@
+.container{
+  text-align: center;  
+  margin-left: auto;
+  width: 100%;
+}
+
+.titulo-principal{
+  padding-top: 58px;
+}
+
+.listab{
+  margin-left: auto;
+  padding: 0;
+  text-align: left;
+}
+
+.alinha-esquerda{
+  text-align: left;
+}
+
+.botao-atualiza{
+  position:fixed;
+  top:0;
+  right:0;
+  background-image:url(../imagens/refresh.png);
+	background-repeat:no-repeat;
+	width:64px;
+	height:68px;
+	border:none;
+}
