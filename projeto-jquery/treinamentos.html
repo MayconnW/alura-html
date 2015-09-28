@@ -16,12 +16,14 @@
   <div class="container">
     <h1 class="titulo-principal">Lista de Afazeres</h1>
     
-    <input id="botao-atualiza-ajax" type="button" value="atualizar lista generic" hidden >
+    <div class="cabecalho">
+      <div class="sub-cabecalho">
+        <a id="botao-atualiza-get" href="" class="botao-atualiza">atualizar</a>
+      </div>
+    </div>
     
-    <input id="botao-atualiza-get" type="button" value="" class="botao-atualiza">
-    
-    <ul id="lista" class="listab">
-    
+    <ul id="lista" class="listab cor-selecao">
+      
     </ul>
     
     <div class="alinha-esquerda">
@@ -31,88 +33,7 @@
     </div>
     
     <script src="js/jquery.js"></script>  
-    <script>
-    
-      function addItem(id_, nome_){
-        $("<li>",{id:id_}).text(nome_).addClass("list-group-item dropdown-toggle").appendTo("#lista");
-      }
-       
-      function atualiza (){
-    
-        $.ajax({
-          url: "https://livro-rails-mayconn.c9.io/compromissos.json",
-          dataType: "jsonp",
-          success: function(retorno){
-            $("#lista li").remove();
-            $.each(retorno, function(){
-              //$("<li>",{id:this.id}).text(this.descricao).addClass("list-group-item dropdown-toggle").appendTo("#lista");
-              addItem(this.id,this.descricao);
-            }); 
-          }
-        });
-              
-      }
-      
-      $("#lista").on("mouseover", "li", function(){
-        $(this).removeClass("sem-cor");
-        $(this).addClass("cor-selecao");
-      }  
-      );
-      
-      $("#lista").on("mouseout","li", function(){
-        $(this).removeClass("cor-selecao");
-        $(this).addClass("sem-cor");
-      }  
-      );
-      
-      $("#botao-adiciona").click(function(){
-        var input = $("#treinamento");
-        var novo = input.val();
-      //  addItem(-1, novo);
-        
-        var jsonPost = JSON.stringify('{descricao": "teste"}');
-        $.post("https://livro-rails-mayconn.c9.io/compromissos.json",{compromisso:{"descricao": novo}},'jsonp');
-        
-        
-        input.val("");    
-      });
-      
-      $('#lista').on("click", "li", function(){
-          $(this).animate({"margin-left":"-=300"},2000,function(){
-            $(this).remove();
-    
-            $.ajax({
-              type: "DELETE",
-              url: "https://livro-rails-mayconn.c9.io/compromissos/"+$(this).attr("id")+".json",
-              data: {compromisso:{"id": '"'+$(this).attr("id")+'"'}},
-              dataType: 'jsonp'
-            });
-            
-          });
-        }
-      
-      );
-      
-      $("#botao-atualiza-ajax").click(function(){
-        $.ajax({
-          url: "http://mirrorfashion.caelum.com.br/treinamentos",
-          dataType: "jsonp",
-          success: function(retorno){
-            $.each(retorno.treinamentos, function(){
-              $("<li>", {id:"'li'"}).text(this.nome).appendTo("#lista");
-            }); 
-          }
-        });
-      });
-      
-      $("#botao-atualiza-get").click(atualiza);
-    
-      
-      atualiza();
-          
-      
-      
-    </script>
+    <script src="js/treinamentos.js"></script>
 
   </div>
 </body>

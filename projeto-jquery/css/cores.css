@@ -1,8 +1,10 @@
-.cor-selecao{
-  background-color: grey;  
+.cor-selecao li:hover{
+  background-color: grey; 
+  opacity: 0.9;
+  cursor: pointer;
   
 }
 
-.sem-cor{
+.sem-cor li{
   background-color: white;
 }
