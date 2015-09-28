@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="css/carrinho.css">
+  <meta charset="utf-8">
+</head>
+<body>
+	<div class="carrinho">
+		<h2>Carrinho entrega em Sao Paulo</h2>
+		<table id="tabela-produtos">
+			<thead>
+				<tr>
+					<td></td>
+					<td>Nome</td>
+					<td>Quantidade</td>
+					<td>Valor</td>
+					<td>Total</td>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<td><img src="imagens/tablet.jpg"></td>
+					<td>Tablet miPad 18</td>
+					<td>1</td>
+					<td>499.99</td> 
+					<td class="total-item">499.99</td>
+                    <td><a class="remove-item" href="">(remover)</a></td>
+				</tr>
+				<tr>
+					<td><img src="imagens/telefone.png"></td>
+					<td>Telefone miPhone 18</td>
+					<td>2</td>
+					<td>199.99</td>
+					<td class="total-item">399.98</td>
+                    <td><a class="remove-item" href="">(remover)</a></td>
+				</tr>
+				<tr>
+					<td><img src="imagens/sapato.jpg"></td>
+					<td>Sapato</td>
+					<td>1</td>
+					<td>99.99</td>
+					<td class="total-item">99.99</td>
+                    <td><a class="remove-item" href="">(remover)</a></td>
+				</tr>
+				<tr>
+					<td><img src="imagens/monitor.jpg"></td>
+					<td>Monitor Sam 21</td>
+					<td>1</td>
+					<td>299.00</td>
+					<td class="total-item">299.00</td>
+                    <td><a class="remove-item" href="">(remover)</a></td>
+				</tr>
+				<tr>
+					<td><img src="imagens/teclado.jpg"></td>
+					<td>Teclado com fio preto </td>
+					<td>1</td>
+					<td>100.00</td>
+					<td class="total-item">100.00</td>
+                    <td><a class="remove-item" href="">(remover)</a></td>
+				</tr>
+				<tr>
+					<td><img src="imagens/mouse.jpg"></td>
+					<td>Mouse wireless</td>
+					<td>1</td>
+					<td>199.00</td>
+					<td class="total-item">199.00</td>
+                    <td><a class="remove-item" href="">(remover)</a></td>
+				</tr>
+				<tr>
+					<td><img src="imagens/camiseta.jpg"></td>
+					<td>Camiseta G</td>
+					<td>1</td>
+					<td>25.00</td>
+					<td class="total-item">25.00</td>
+                    <td><a class="remove-item" href="">(remover)</a></td>
+				</tr>
+			</tbody>
+		</table>
+	
+	</div>
+  
+  <div>
+    <h2>Resumo do Pedido</h2>
+    <p>Quantidade de itens: <span id="itens-pedido">0</span></p>
+    <p>Total: R$<span id="total-pedido">0</span></p>    
+  </div>
+  
+  <div>
+    <input type="button" id="botao-voltar" value="Undo">
+  </div>
+  
+  <script src="js/jquery.js"></script>
+  <script src="js/index.js"></script>
+
+</body>
+</html>
