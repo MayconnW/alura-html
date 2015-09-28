@@ -1,0 +1,10 @@
+.navbar-toggle{
+  color:#FFFFFF;
+  padding-right: 1.1em;
+  padding-left: 1.1em;
+}
+
+.form-control-complemento{
+  width:auto;
+  display: inline-block;
+}
